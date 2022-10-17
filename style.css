@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #100E0Dff;
+    background-color: #100E0D;
     font-family: 'Josefin Sans', sans-serif;
     overflow-x: hidden;
 }
@@ -48,13 +48,14 @@ body header h1 span:nth-child(3){
     transform: translate(45%);
 }
 body .stylax{
-    min-height: 80vh;
     width: 100%;
+    max-width: 1400px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30vh;
+    gap: 10vh;
 }
 body .stylax .long-images{
     width: 80%;
@@ -62,7 +63,7 @@ body .stylax .long-images{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: 5vh;
 }
 body .stylax .long-images .long-image{
     width: 100%;
@@ -79,8 +80,8 @@ body .stylax .long-images .long-image .left{
     position: relative;
 }
 body .stylax .long-images .long-image .left .shape{
-    height: 90%;
-    width: 335px;
+    aspect-ratio: 0.53;
+    width: 70%;
     border-radius: 200px;
     position: absolute;
     top: 51%;
@@ -92,7 +93,7 @@ body .stylax .long-images .long-image:nth-child(2n) .left .shape{
     border: solid 2px #f6f4f4;
 }
 body .stylax .long-images .long-image .left img{
-    height: 90%;
+    width: 70%;
     border-radius: 200px;
     position: absolute;
     top: 50%;
@@ -107,6 +108,7 @@ body .stylax .long-images .long-image .right{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    position: relative;
 }
 body .stylax .long-images .long-image:nth-child(2n) .right{
     text-align: right;
@@ -123,7 +125,28 @@ body .stylax .long-images .long-image .right .camera-infos{
 }
 body .stylax .long-images .long-image .right .title{
     font-size: 4vw;
-}body .stylax .long-images .long-image .right .desc{
+    margin-bottom: 64px;
+    white-space: nowrap;
+    color: transparent;
+    background: linear-gradient( #100E0D , #100E0D) white no-repeat 0 0;
+    position: relative;
+    overflow: hidden;
+    display: table;
+    z-index: 1;
+}
+body .stylax .long-images .long-image .right .title::before{
+    content: "";
+    position: absolute;
+    inset: 0 0;
+    background-color: grey;
+    transform: translate(-100%);
+    transition: .3s;
+    z-index: -1;
+}
+body .stylax .long-images .long-image .right .title:hover::before{
+    transform: translate(0);
+}
+body .stylax .long-images .long-image .right .desc{
     text-align: justify;
     line-height: 24px;
     margin-top: 12px;
@@ -163,6 +186,19 @@ body .stylax .long-images .long-image .right .desc a::after{
 }
 body .stylax .long-images .long-image .right .desc a:hover::after{
     transform: scaleX(1);
+}
+body .stylax .long-images .long-image .right .sticker-iso{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    height: 160px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('imgs/stikertapeurrrrrr.png');
+    background-size: contain;
+    color: #100E0D;
 }
 body .stylax .imgs{
     height: 50vh;
@@ -236,7 +272,7 @@ body .stylax .imgs .desc p span:nth-child(2){
     width: 100%;
     position: fixed;
     inset: 0 0;
-    background-color: #100E0Dff;
+    background-color: #100E0D;
     display: flex;
     justify-content: center;
     align-items: center;
