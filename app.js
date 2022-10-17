@@ -24,6 +24,9 @@ window.addEventListener('load', () =>{
         opacity: 0,
         scale: 1.5
     }, "-=0.3")
+    .to(".container", {
+        overflow: "visible"
+    })
 
     Tl.play()
 })
