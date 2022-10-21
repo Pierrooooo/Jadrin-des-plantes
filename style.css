@@ -3,14 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --main-black-color: #100E0D;
+    --main-white-color: #f6f4f4;
+    --main-blue-color: #8990c6;
+}
 body{
-    background-color: #100E0D;
+    background-color: var(--main-black-color);
     font-family: 'Josefin Sans', sans-serif;
 }
 body .container{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    background-color: var(--main-black-color);
+    overflow: visible;
+    /* overflow: hidden; */
 }
 body header{
     min-height: 100vh;
@@ -36,7 +43,7 @@ body header h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #f6f4f4;
+    color: var(--main-white-color);
     font-size: 12vw;
     font-weight: bold;
     opacity: 1;
@@ -61,6 +68,8 @@ body .stylax{
     justify-content: center;
     align-items: center;
     gap: 10vh;
+    margin-bottom: 40vh;
+    background-color: var(--main-black-color);
 }
 body .stylax .long-images{
     width: 80%;
@@ -92,10 +101,10 @@ body .stylax .long-images .long-image .left .shape{
     top: 51%;
     left: 41%;
     transform: translate(-50%, -50%);
-    border: solid 2px #8990c6;
+    border: solid 2px var(--main-blue-color);
 }
 body .stylax .long-images .long-image:nth-child(2n) .left .shape{
-    border: solid 2px #f6f4f4;
+    border: solid 2px var(--main-white-color);
 }
 body .stylax .long-images .long-image .left img{
     width: 70%;
@@ -108,7 +117,7 @@ body .stylax .long-images .long-image .left img{
 body .stylax .long-images .long-image .right{
     width: 50%;
     height: 100%;
-    color: #f6f4f4;
+    color: var(--main-white-color);
     padding: 15vh 32px;
     display: flex;
     flex-direction: column;
@@ -126,15 +135,15 @@ body .stylax .long-images .long-image .right .camera-infos{
     flex-direction: row;
     justify-content: space-between;
     text-transform: uppercase;
-    color: #8990c6;
+    color: var(--main-blue-color);
 }
 body .stylax .long-images .long-image .right .title{
     font-size: 4vw;
     margin-bottom: 64px;
     white-space: nowrap;
-    color: #f6f4f4;
+    color: var(--main-white-color);
     /* color: transparent; */
-    /* background: linear-gradient( #100E0D , #100E0D) white no-repeat 0 0; */
+    /* background: linear-gradient( var(--main-black-color) , var(--main-black-color)) white no-repeat 0 0; */
     /* position: relative;
     overflow: hidden;
     display: table;
@@ -158,7 +167,7 @@ body .stylax .long-images .long-image .right .desc{
     margin-top: 12px;
 }
 body .stylax .long-images .long-image .right .desc a{
-    color: #f6f4f4;
+    color: var(--main-white-color);
     text-decoration: none;
     position: relative;
 }
@@ -169,7 +178,7 @@ body .stylax .long-images .long-image .right .desc a::before{
     left: 0;
     height: 1px;
     width: 100%;
-    background-color: #8990c6;
+    background-color: var(--main-blue-color);
     transform: scaleX(1);
     transition: .3s;
     transform-origin: right;
@@ -184,7 +193,7 @@ body .stylax .long-images .long-image .right .desc a::after{
     left: 0;
     height: 1px;
     width: 100%;
-    background-color: #8990c6;
+    background-color: var(--main-blue-color);
     transform: scaleX(0);
     transition: .3s;
     transition-delay: .15s;
@@ -221,9 +230,6 @@ body .stylax .imgs .img-div .img{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 }
 body .stylax .imgs .img-div .img2{
     background-image: url('imgs/2.PNG');
@@ -248,7 +254,7 @@ body .stylax .imgs .img-div .desc{
     max-width: 20%;
 }
 body .stylax .imgs .desc p{
-    color: #f6f4f4;
+    color: var(--main-white-color);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -256,6 +262,148 @@ body .stylax .imgs .desc p{
 }
 body .stylax .imgs .desc p span:nth-child(2){
     text-transform: uppercase;
+}
+body footer{
+    background-color: var(--main-black-color);
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    gap: 10%;
+    width: 100%;
+    z-index: -10;
+    padding: 10vh 0;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+body footer .colored{
+    position: absolute;
+    background-color: var(--main-blue-color);
+    inset: 0 0;
+    padding: 16px;
+}
+body footer .colored span{
+    color: var(--main-black-color);
+    font-weight: 700;
+    position: absolute;
+    transform-origin: left;
+    transform: rotate(-90deg) translate(-52px);
+    ms-transform: rotate(90deg);
+    webkit-transform: rotate(90deg);
+}
+body footer .who-we-are,
+body footer .share-it{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: fit-content;
+    color: var(--main-blue-color);
+    gap: 24px;
+}
+body footer .who-we-are .title,
+body footer .share-it .title{
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+body footer .who-we-are a,
+body footer .share-it a{
+    text-decoration: none;
+    color: var(--main-white-color);
+    font-size: 20px;
+    position: relative;
+    width: fit-content;
+}
+body footer .who-we-are a::before,
+body footer .share-it a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-white-color);
+    transform: scaleX(1);
+    transition: .3s;
+    transform-origin: right;
+}
+body footer .who-we-are a:hover::before,
+body footer .share-it a:hover::before{
+    transform: scaleX(0); 
+}
+body footer .who-we-are a::after,
+body footer .share-it a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-white-color);
+    transform: scaleX(0);
+    transition: .3s;
+    transition-delay: .15s;
+    transform-origin: left;
+}
+body footer .who-we-are .designer-dev{
+    position: inherit;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+body footer .who-we-are a:hover::after,
+body footer .share-it a:hover::after{
+    transform: scaleX(1);
+}
+body footer .who-we-are .designer-dev span{
+    position: relative;
+    width: fit-content;
+}
+body footer .who-we-are .designer-dev span::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-white-color);
+    transform: scaleX(1);
+    transition: .3s;
+    transform-origin: right;
+}
+body footer .who-we-are .designer-dev:hover span::before{
+    transform: scaleX(0);
+}
+body footer .who-we-are .designer-dev span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-white-color);
+    transform: scaleX(0);
+    transition: .3s;
+    transition-delay: .15s;
+    transform-origin: left;
+}
+body footer .who-we-are .designer-dev:hover span::after{
+    transform: scaleX(1);
+}
+body footer .who-we-are .designer-dev span:nth-of-type(2)::before{
+    display: none;
+}body footer .who-we-are .designer-dev span:nth-of-type(2)::after{
+    display: none;
+}
+body footer .who-we-are .designer-dev span:nth-of-type(3)::before{
+    transition-delay: .15s;
+}body footer .who-we-are .designer-dev span:nth-of-type(3)::after{
+    transition-delay: .3s;
 }
 
 /* LOADING */
@@ -265,7 +413,7 @@ body .stylax .imgs .desc p span:nth-child(2){
     width: 100%;
     position: fixed;
     inset: 0 0;
-    background-color: #100E0D;
+    background-color: var(--main-black-color);
     display: flex;
     justify-content: center;
     align-items: center;

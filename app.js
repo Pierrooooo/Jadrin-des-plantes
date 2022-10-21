@@ -1,35 +1,35 @@
-const allImages = document.querySelectorAll('.loading .img')
-const imgSection = document.querySelector('.loading')
-const allImagesArray = Array.from(allImages)
-const reversedAllImagesArray = allImagesArray.reverse()
+// const allImages = document.querySelectorAll('.loading .img')
+// const imgSection = document.querySelector('.loading')
+// const allImagesArray = Array.from(allImages)
+// const reversedAllImagesArray = allImagesArray.reverse()
 
 
-window.addEventListener('load', () =>{
+// window.addEventListener('load', () =>{
 
-    const Tl = gsap.timeline({paused: true})
+//     const Tl = gsap.timeline({paused: true})
 
-    Tl.
-    staggerTo(reversedAllImagesArray, .5, {opacity: 0, ease:"power4.out"},.5)
-    .to(imgSection, 1.2, {
-        top: '-100vh',
-        ease: "power4.inOut",
-        opacity: 0
-    }, 2.1)
-    .from('header img', .5,{
-        ease: "power4.inOut",
-        opacity: 0,
-    }, "-=0.3")
-    .from('h1', .5,{
-        ease: "power4.inOut",
-        opacity: 0,
-        scale: 1.5
-    }, "-=0.3")
-    .to(".container", {
-        overflow: "visible"
-    })
+//     Tl.
+//     staggerTo(reversedAllImagesArray, .5, {opacity: 0, ease:"power4.out"},.5)
+//     .to(imgSection, 1.2, {
+//         top: '-100vh',
+//         ease: "power4.inOut",
+//         opacity: 0
+//     }, 2.1)
+//     .from('header img', .5,{
+//         ease: "power4.inOut",
+//         opacity: 0,
+//     }, "-=0.3")
+//     .from('h1', .5,{
+//         ease: "power4.inOut",
+//         opacity: 0,
+//         scale: 1.5
+//     }, "-=0.3")
+//     .to(".container", {
+//         overflow: "visible"
+//     })
 
-    Tl.play()
-})
+//     Tl.play()
+// })
 
 gsap.to("header img",{
         scrollTrigger:{
@@ -90,3 +90,18 @@ const allStylaxImagesArray = Array.from(allStylaxImages)
         top:"47%"
     })
 })
+
+// FOOTER
+
+
+gsap.to('.colored',{
+        scrollTrigger:{
+            trigger:'.colored',
+            start: 'top bottom',
+            end: 'top center',
+            toggleActions: "play reverse play reverse",
+            scrub: 1
+        },
+        ease: "power4.inOut",
+        y: "100%"
+    })
