@@ -93,14 +93,14 @@ const allStylaxImagesArray = Array.from(allStylaxImages)
 
 // FOOTER
 
-
 gsap.to('.colored',{
         scrollTrigger:{
             trigger:'.colored',
             start: 'top bottom',
             end: 'top center',
             toggleActions: "play reverse play reverse",
-            scrub: 1
+            scrub: 1,
+            markers: true
         },
         ease: "power4.inOut",
         y: "100%"

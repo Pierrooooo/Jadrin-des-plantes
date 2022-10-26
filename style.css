@@ -20,7 +20,7 @@ body .container{
     /* overflow: hidden; */
 }
 body header{
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ body header{
     align-items: center;
     position: relative;
     margin-bottom: 15vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body header img{
     position: absolute;
@@ -44,7 +44,7 @@ body header h1{
     justify-content: center;
     align-items: center;
     color: var(--main-white-color);
-    font-size: 12vw;
+    font-size: max(3.5rem, 12vw);
     font-weight: bold;
     opacity: 1;
     mix-blend-mode: difference;
@@ -138,7 +138,7 @@ body .stylax .long-images .long-image .right .camera-infos{
     color: var(--main-blue-color);
 }
 body .stylax .long-images .long-image .right .title{
-    font-size: 4vw;
+    font-size: max(1.5em ,4vw);
     margin-bottom: 64px;
     white-space: nowrap;
     color: var(--main-white-color);
@@ -274,7 +274,7 @@ body footer{
     gap: 10%;
     width: 100%;
     z-index: -10;
-    padding: 10vh 0;
+    padding: 10vh 0 15vh 0;
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -434,4 +434,76 @@ body footer .who-we-are .designer-dev span:nth-of-type(3)::before{
     background-size: cover;
     background-position: center;
 }
-
+@media screen and (max-width: 750px){
+    body header{
+        /* height: 80vh; */
+    }
+    body header img{
+        height: 30vh;
+        top: 35vh;
+    }
+    body header h1{
+        gap: 8vh;
+    }
+    body .stylax {
+        margin-bottom: 0;
+    }
+    body .stylax .long-images {
+        gap: 0;
+    }
+    body .stylax .long-images .long-image{
+        flex-direction: column !important;
+        height: 85vh;
+    }
+    body .stylax .long-images .long-image:nth-child(2n+1){
+        align-items: flex-end;
+    }
+    body .stylax .long-images .long-image .left{
+        height: 50%;
+    }
+    body .stylax .long-images .long-image .left img{
+        width: 100%;
+    }body .stylax .long-images .long-image .left .shape{
+        width: 100%;
+    }
+    body .stylax .long-images .long-image .right{
+        width: 100%;
+        padding: 0 32px;
+        height: auto;
+    }
+    body .stylax .long-images .long-image .right .title{
+        margin-bottom: 32px;
+    }
+}
+@media screen and (max-width: 650px){
+    body footer{
+        gap: 128px;
+    }
+    body footer .who-we-are,
+    body footer .share-it{
+        width: 340px;
+    }
+}
+@media screen and (max-width: 500px){
+    
+    body .stylax .long-images .long-image .left{
+        width: 90%;
+    }
+    body .stylax .long-images .long-image .right{
+        gap: 0;
+        padding-top: 32px;
+        background: rgb(16,14,13);
+        background: linear-gradient(0deg, rgba(16,14,13,1) 0%, rgba(16,14,13,0.8) 85%, rgba(16,14,13,0) 100%);
+    }
+    body .stylax .long-images .long-image .right .title{
+        margin-bottom: 24px;
+    }
+}
+@media screen and (max-width: 400px){
+    body .stylax .long-images{
+        gap: 64px;
+    }
+    body .stylax .long-images .long-image .left{
+        width: 70%;
+    }
+}
