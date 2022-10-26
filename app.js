@@ -99,8 +99,7 @@ gsap.to('.colored',{
             start: 'top bottom',
             end: 'top center',
             toggleActions: "play reverse play reverse",
-            scrub: 1,
-            markers: true
+            scrub: 1
         },
         ease: "power4.inOut",
         y: "100%"
