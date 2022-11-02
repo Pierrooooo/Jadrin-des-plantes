@@ -9,12 +9,18 @@ window.addEventListener('load', () =>{
     const Tl = gsap.timeline({paused: true})
 
     Tl.
-    staggerTo(reversedAllImagesArray, .5, {opacity: 0, ease:"power4.out"},.5)
-    .to(imgSection, 1.2, {
+    to('.img-color', .5, {
+        ease: "power4.inOut",
+        opacity: 0
+    })
+    .staggerTo(reversedAllImagesArray, 1, {
+        opacity: 0, ease:"power4.out"
+    },.5)
+    .to(imgSection, {
         top: '-100vh',
         ease: "power4.inOut",
         opacity: 0
-    }, 2.1)
+    }, 3.1)
     .from('header img', .5,{
         ease: "power4.inOut",
         opacity: 0,

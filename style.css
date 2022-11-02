@@ -433,6 +433,12 @@ body footer .who-we-are .designer-dev span:nth-of-type(3)::before{
     background-size: cover;
     background-position: center;
 }
+.loading .imgs .img-color{
+    z-index: 1000;
+    background-color: var(--main-black-color);
+    height: 400px;
+    width: 270px;
+}
 @media screen and (max-width: 750px){
     body header{
         /* height: 80vh; */
