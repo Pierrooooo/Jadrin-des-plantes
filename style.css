@@ -291,9 +291,9 @@ body footer .colored span{
     font-weight: 700;
     position: absolute;
     transform-origin: left;
-    transform: rotate(-90deg) translate(-52px);
-    ms-transform: rotate(90deg);
-    webkit-transform: rotate(90deg);
+    transform: rotate(-180deg) translate(-8px);
+    ms-transform: rotate(-180deg) translate(-8px);
+    webkit-transform: rotate(-180deg) translate(-8px);
 }
 body footer .who-we-are,
 body footer .share-it{
@@ -435,12 +435,6 @@ body footer .who-we-are .designer-dev span:nth-of-type(3)::before{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-.loading .imgs .img-color{
-    z-index: 1000;
-    background-color: var(--main-black-color);
-    height: 400px;
-    width: 270px;
 }
 @media screen and (max-width: 750px){
     body header{
