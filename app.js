@@ -15,12 +15,12 @@ window.addEventListener('load', () =>{
     })
     .staggerTo(reversedAllImagesArray, 1, {
         opacity: 0, ease:"power4.out"
-    },.5)
+    },.2)
     .to(imgSection, {
         top: '-100vh',
         ease: "power4.inOut",
         opacity: 0
-    }, 3.1)
+    }, 1.6)
     .from('header img', .5,{
         ease: "power4.inOut",
         opacity: 0,

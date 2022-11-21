@@ -8,9 +8,11 @@
     --main-white-color: #f6f4f4;
     --main-blue-color: #8990c6;
 }
+html,
 body{
     background-color: var(--main-black-color);
     font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
 }
 body .container{
     width: 100%;
@@ -422,8 +424,9 @@ body footer .who-we-are .designer-dev span:nth-of-type(3)::before{
     position: relative;
 }
 .loading .imgs .img{
-    height: 400px;
-    width: 260px;
+    min-height: 300px;
+    height: 50vh;
+    aspect-ratio: 0.65;
     position: absolute;
     left: 50%;
     top: 50%;
