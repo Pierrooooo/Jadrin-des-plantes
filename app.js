@@ -1,3 +1,10 @@
+console.log('%c', Array.from(document.querySelectorAll('body footer .logo_link img'))[0], '\nthis website has been made by www.8pier.re','color:#100E0D')
+
+console.log(
+    `%c${store.title} \nMade with ❤️ by ${store.author.name} \n↳ ${store.author.link}`,
+    'color: #342f2f',
+  )
+
 const allImages = document.querySelectorAll('.loading .img')
 const imgSection = document.querySelector('.loading')
 const allImagesArray = Array.from(allImages)

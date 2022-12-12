@@ -291,9 +291,9 @@ body footer .colored span{
     font-weight: 700;
     position: absolute;
     transform-origin: left;
-    transform: rotate(-180deg) translate(-8px);
-    ms-transform: rotate(-180deg) translate(-8px);
-    webkit-transform: rotate(-180deg) translate(-8px);
+    transform: rotate(-180deg);
+    ms-transform: rotate(-180deg);
+    webkit-transform: rotate(-180deg);
 }
 body footer .who-we-are,
 body footer .share-it{
@@ -405,6 +405,17 @@ body footer .who-we-are .designer-dev span:nth-of-type(3)::before{
     transition-delay: .15s;
 }body footer .who-we-are .designer-dev span:nth-of-type(3)::after{
     transition-delay: .3s;
+}
+body footer .logo_link{
+    width: 24px;
+    aspect-ratio: 1;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+body footer .logo_link img{
+    height: 100%;
+    width: 100%;
 }
 
 /* LOADING */
